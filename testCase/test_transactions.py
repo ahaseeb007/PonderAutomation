@@ -21,6 +21,7 @@ class TestTransactions(BaseTest):
         self.tp= TransactionsPage(self.driver)
         self.tp.click_from_chain_bsc()
         self.tp.click_from_chain_token_bnb()
+        time.sleep(2)
         self.tp.click_to_chain_bsc()
         self.tp.click_to_chain_token_ustd()
         self.tp.input_token_amount("0.001")

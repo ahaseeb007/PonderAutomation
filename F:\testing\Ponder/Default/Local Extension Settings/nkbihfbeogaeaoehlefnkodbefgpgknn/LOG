@@ -1,20 +1,35 @@
-2024/08/09-14:22:14.032 8307 Reusing MANIFEST /Users/admin/PycharmProjects/Ponder-Automation/F:\testing\Ponder/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/MANIFEST-000001
-2024/08/09-14:22:14.033 8307 Recovering log #419
-2024/08/09-14:22:14.039 8307 Level-0 table #422: started
-2024/08/09-14:22:14.061 8307 Level-0 table #422: 2963113 bytes OK
-2024/08/09-14:22:14.070 8307 Delete type=0 #419
-2024/08/09-14:22:21.697 a703 Level-0 table #425: started
-2024/08/09-14:22:21.717 a703 Level-0 table #425: 2963021 bytes OK
-2024/08/09-14:22:21.732 a703 Delete type=0 #423
-2024/08/09-14:22:26.802 a703 Level-0 table #427: started
-2024/08/09-14:22:26.821 a703 Level-0 table #427: 2963033 bytes OK
-2024/08/09-14:22:26.828 a703 Delete type=0 #424
-2024/08/09-14:22:26.828 8307 Compacting 4@0 + 1@1 files
-2024/08/09-14:22:26.861 8307 Generated table #428@0: 1 keys, 2963033 bytes
-2024/08/09-14:22:26.862 8307 Compacted 4@0 + 1@1 files => 2963033 bytes
-2024/08/09-14:22:26.869 8307 compacted to: files[ 0 1 1 0 0 0 0 ]
-2024/08/09-14:22:26.869 8307 Delete type=2 #418
-2024/08/09-14:22:26.869 8307 Delete type=2 #425
-2024/08/09-14:22:26.869 8307 Delete type=2 #427
-2024/08/09-14:22:26.869 8307 Delete type=2 #422
-2024/08/09-14:22:26.869 8307 Delete type=2 #420
+2024/08/09-15:08:20.331 8307 Reusing MANIFEST /Users/admin/PycharmProjects/Ponder-Automation/F:\testing\Ponder/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/MANIFEST-000001
+2024/08/09-15:08:20.331 8307 Recovering log #529
+2024/08/09-15:08:20.340 8307 Level-0 table #532: started
+2024/08/09-15:08:20.370 8307 Level-0 table #532: 2963012 bytes OK
+2024/08/09-15:08:20.378 8307 Delete type=0 #529
+2024/08/09-15:08:20.379 a503 Compacting 4@0 + 1@1 files
+2024/08/09-15:08:20.435 a503 Generated table #534@0: 1 keys, 2963012 bytes
+2024/08/09-15:08:20.436 a503 Compacted 4@0 + 1@1 files => 2963012 bytes
+2024/08/09-15:08:20.443 a503 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/08/09-15:08:26.918 a503 Level-0 table #536: started
+2024/08/09-15:08:26.937 a503 Level-0 table #536: 2962899 bytes OK
+2024/08/09-15:08:26.946 a503 Delete type=2 #528
+2024/08/09-15:08:26.946 a503 Delete type=0 #533
+2024/08/09-15:08:26.946 a503 Delete type=2 #526
+2024/08/09-15:08:26.946 a503 Delete type=2 #532
+2024/08/09-15:08:26.946 a503 Delete type=2 #524
+2024/08/09-15:08:26.946 a503 Delete type=2 #530
+2024/08/09-15:08:30.682 a503 Level-0 table #538: started
+2024/08/09-15:08:30.701 a503 Level-0 table #538: 2963218 bytes OK
+2024/08/09-15:08:30.709 a503 Delete type=0 #535
+2024/08/09-15:08:35.740 a503 Level-0 table #540: started
+2024/08/09-15:08:35.760 a503 Level-0 table #540: 2962995 bytes OK
+2024/08/09-15:08:35.769 a503 Delete type=0 #537
+2024/08/09-15:08:39.924 a503 Level-0 table #542: started
+2024/08/09-15:08:39.942 a503 Level-0 table #542: 2963564 bytes OK
+2024/08/09-15:08:39.951 a503 Delete type=0 #539
+2024/08/09-15:08:39.952 8307 Compacting 4@0 + 1@1 files
+2024/08/09-15:08:39.989 8307 Generated table #543@0: 1 keys, 2963564 bytes
+2024/08/09-15:08:39.990 8307 Compacted 4@0 + 1@1 files => 2963564 bytes
+2024/08/09-15:08:39.998 8307 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/08/09-15:08:39.998 8307 Delete type=2 #538
+2024/08/09-15:08:39.998 8307 Delete type=2 #542
+2024/08/09-15:08:39.998 8307 Delete type=2 #540
+2024/08/09-15:08:39.998 8307 Delete type=2 #534
+2024/08/09-15:08:39.998 8307 Delete type=2 #536

@@ -10,8 +10,8 @@ class TransactionsPage:
 
     bsc_xpath= "//span[contains(text(), 'BSC')]"
     bnb_image_css= "img.c-ezVtOj.c-ezVtOj-ijNtXOL-css[src='https://assets.coingecko.com/coins/images/825/small/binance-coin-logo.png?1547034615']"
-    bnb_token_xpath = "/span[contains(text(), 'BNB')]"
-    dai_token_xpath= "/span[contains(text(), 'DAI')]"
+    bnb_token_xpath = "//span[contains(text(), 'BNB')]"
+    dai_token_xpath= "//span[contains(text(), 'DAI')]"
     ustd_token_xpath= "//span[contains(text(), 'USDT')]"
     enter_password_field_ID= "password"
     click_unlock_btn_xpath= "//button[@data-testid='unlock-submit']"
@@ -47,10 +47,11 @@ class TransactionsPage:
 
     def click_to_chain_bsc(self):
         try:
-            wait = WebDriverWait(self.driver, 10)
+            wait = WebDriverWait(self.driver, 20)
             click_bsc_chain = wait.until(
             EC.element_to_be_clickable((By.XPATH, self.bsc_xpath)))
             click_bsc_chain.click()
+            time.sleep(3)
             click_bsc_chain.click()
         except:
             assert False, "To BSC chain button is not visible"
