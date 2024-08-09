@@ -1,5 +1,23 @@
-2024/08/08-13:07:08.077 a707 Reusing MANIFEST /Users/admin/PycharmProjects/Ponder-Automation/F:\testing\Ponder/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/MANIFEST-000001
-2024/08/08-13:07:08.078 a707 Recovering log #778
-2024/08/08-13:07:08.082 a707 Level-0 table #781: started
-2024/08/08-13:07:08.102 a707 Level-0 table #781: 3034874 bytes OK
-2024/08/08-13:07:08.110 a707 Delete type=0 #778
+2024/08/09-14:21:34.143 8307 Reusing MANIFEST /Users/admin/PycharmProjects/Ponder-Automation/F:\testing\Ponder/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/MANIFEST-000001
+2024/08/09-14:21:34.143 8307 Recovering log #409
+2024/08/09-14:21:34.149 8307 Level-0 table #412: started
+2024/08/09-14:21:34.169 8307 Level-0 table #412: 2962132 bytes OK
+2024/08/09-14:21:34.178 8307 Delete type=0 #409
+2024/08/09-14:21:46.004 a303 Level-0 table #415: started
+2024/08/09-14:21:46.024 a303 Level-0 table #415: 2962785 bytes OK
+2024/08/09-14:21:46.041 a303 Delete type=0 #413
+2024/08/09-14:22:01.264 a303 Level-0 table #417: started
+2024/08/09-14:22:01.285 a303 Level-0 table #417: 2961967 bytes OK
+2024/08/09-14:22:01.292 a303 Delete type=0 #414
+2024/08/09-14:22:01.292 8307 Compacting 4@0 + 1@1 files
+2024/08/09-14:22:01.324 8307 Generated table #418@0: 1 keys, 2961967 bytes
+2024/08/09-14:22:01.324 8307 Compacted 4@0 + 1@1 files => 2961967 bytes
+2024/08/09-14:22:01.333 8307 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/08/09-14:22:01.333 8307 Delete type=2 #410
+2024/08/09-14:22:01.333 8307 Delete type=2 #412
+2024/08/09-14:22:01.333 8307 Delete type=2 #417
+2024/08/09-14:22:01.333 8307 Delete type=2 #415
+2024/08/09-14:22:01.333 8307 Delete type=2 #408
+2024/08/09-14:22:03.169 f603 Level-0 table #420: started
+2024/08/09-14:22:03.190 f603 Level-0 table #420: 2962697 bytes OK
+2024/08/09-14:22:03.198 f603 Delete type=0 #416

@@ -11,8 +11,11 @@ class MetaMaskPage:
     enter_password_field_ID= "password"
     click_unlock_btn_xpath= "//button[@data-testid='unlock-submit']"
     ethereum_chain_xpath= "//span[normalize-space()='Ethereum']"
+    next_button_xpath= '//button[text()="Next"]'
     click_confirm_btn_css= ".btn--rounded.btn-primary"
     connect_wallet_xpath= "//button[normalize-space()='Connect Wallet']"
+    confirm_button_xpath= '//button[text()="Confirm"]'
+    next_button_css= 'button.btn--rounded.btn-primary.page-container__footer-button'
 
     def __init__(self,driver):
         self.driver= driver
@@ -54,7 +57,7 @@ class MetaMaskPage:
         shadow_element = fifth_shadow_root.find_element(By.CSS_SELECTOR, "wui-list-wallet[name='MetaMask']")
         shadow_element.click()
 
-        time.sleep(2)
+        time.sleep(10)
 
     def switch_to_meta_mask(self):
 
@@ -73,6 +76,36 @@ class MetaMaskPage:
     def click_unblock_btn(self):
 
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.XPATH,self.click_unlock_btn_xpath))).click()
+        time.sleep(5)
+
+    def click_next_btn(self):
+
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR,self.next_button_css))).click()
+
+    def validate_transaction_successful(self):
+
+        try:
+            WebDriverWait(self.driver, 20).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, "span.c-dXbppQ.c-dXbppQ-lnuBr-color-gray.c-dXbppQ-kQnmw-heading-h9")))
+
+            # Locate the "Transaction Hash" label
+            transaction_hash_label = self.driver.find_element(By.CSS_SELECTOR,
+                                                         "span.c-dXbppQ.c-dXbppQ-lnuBr-color-gray.c-dXbppQ-kQnmw-heading-h9")
+
+            # Print the label text
+            print("Label:", transaction_hash_label.text)
+
+            # Locate the transaction hash value
+            transaction_hash_value = self.driver.find_element(By.CSS_SELECTOR,
+                                                         "span.c-dXbppQ.c-dXbppQ-lnuBr-color-gray.c-dXbppQ-kQnmw-heading-h9.c-dXbppQ-igsmDXe-css")
+
+            # Print the transaction hash value
+            print("Transaction Hash:", transaction_hash_value.text)
+
+            swap_again_button = self.driver.find_element(By.XPATH, "//button[contains(., 'Swap Again')]")
+
+        except:
+            assert False, "Transaction is not successful"
 
     def switch_window(self):
 

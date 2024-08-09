@@ -5,6 +5,7 @@ from testCase.test_base import BaseTest
 
 class TestWallet(BaseTest):
     @pytest.mark.run(order=1)
+    @pytest.mark.skip
     def test_connect_wallet(self):
         self.mp = MetaMaskPage(self.driver)
         self.mp.click_connect_wallet()

@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
@@ -22,7 +24,6 @@ def setup(request):
         web_driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
         web_driver.get(config.app_url)
         web_driver.maximize_window()
-
     request.cls.driver = web_driver
     yield
     web_driver.quit()

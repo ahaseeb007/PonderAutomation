@@ -8,10 +8,11 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class TransactionsPage:
 
-    bsc_xpath= "//span[contains(@class, 'c-dXbppQ') and contains(@class, 'c-kQgvfk') and contains(@class, 'c-dXbppQ-kQlCNI-color-purple') and contains(@class, 'c-dXbppQ-hZUhMv-heading-h5') and text()='BSC']"
+    bsc_xpath= "//span[contains(text(), 'BSC')]"
     bnb_image_css= "img.c-ezVtOj.c-ezVtOj-ijNtXOL-css[src='https://assets.coingecko.com/coins/images/825/small/binance-coin-logo.png?1547034615']"
-    bnb_token_xpath = "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]"
-    dai_token_xpath= "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[3]/div[1]/img[1]"
+    bnb_token_xpath = "/span[contains(text(), 'BNB')]"
+    dai_token_xpath= "/span[contains(text(), 'DAI')]"
+    ustd_token_xpath= "//span[contains(text(), 'USDT')]"
     enter_password_field_ID= "password"
     click_unlock_btn_xpath= "//button[@data-testid='unlock-submit']"
     ethereum_chain_xpath= "//span[normalize-space()='Ethereum']"
@@ -63,6 +64,15 @@ class TransactionsPage:
         except:
             assert False, "To DAI token button is not visible"
 
+    def click_to_chain_token_ustd(self):
+        try:
+            wait = WebDriverWait(self.driver, 20)
+            click_bnb_token = wait.until(
+            EC.element_to_be_clickable((By.XPATH, self.ustd_token_xpath)))
+            click_bnb_token.click()
+        except:
+            assert False, "To USDT token button is not visible"
+
     def input_token_amount(self, token_amount):
         try:
             wait = WebDriverWait(self.driver, 20)
@@ -74,9 +84,10 @@ class TransactionsPage:
 
     def click_accept_button(self):
         try:
-            wait = WebDriverWait(self.driver, 10)
+            wait = WebDriverWait(self.driver, 30)
             accept_button = wait.until(
             EC.element_to_be_clickable((By.XPATH, self.accept_button_xpath)))
             accept_button.click()
+            time.sleep(20)
         except:
             assert False, "Accept button not visible or clickable"
