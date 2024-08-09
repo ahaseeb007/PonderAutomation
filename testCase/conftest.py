@@ -20,8 +20,6 @@ def pytest_runtest_makereport(item, call):
 def setup(request):
     if request.param=="chrome":
         chrome_options = ChromeOptions()
-        chrome_options.add_argument("--disable-web-security")
-        chrome_options.add_argument("--disable-features=IsolateOrigins,site-per-process")
         chrome_options.add_argument("user-data-dir=F:\\testing\\Ponder")
         web_driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
         web_driver.get(config.app_url)

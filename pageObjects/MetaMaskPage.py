@@ -64,7 +64,7 @@ class MetaMaskPage:
     def open_metamask_(self):
 
         # Open a new tab with an empty URL
-        self.driver.execute_script("window.open('', '_blank');")
+        # self.driver.execute_script("window.open('', '_blank');")
 
         # Get all window handles
         all_handles = self.driver.window_handles
@@ -73,7 +73,9 @@ class MetaMaskPage:
         self.driver.switch_to.window(all_handles[-1])
 
         # Navigate to the Chrome extension page
-        self.driver.get("chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html")
+        # self.driver.get("chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html")
+
+        time.sleep(5)
 
     def switch_to_meta_mask(self):
 
@@ -94,7 +96,7 @@ class MetaMaskPage:
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.XPATH,self.click_unlock_btn_xpath))).click()
         time.sleep(5)
 
-    def click_next_btn(self):
+    def click_confirm_btn(self):
 
         try:
             WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH,self.confirm_button)))
@@ -129,7 +131,7 @@ class MetaMaskPage:
             print("Transaction Hash:", transaction_hash_value.text)
 
             swap_again_button = self.driver.find_element(By.XPATH, "//button[contains(., 'Swap Again')]")
-
+            print("Swap again button is visible")
         except:
             assert False, "Transaction is not successful"
 

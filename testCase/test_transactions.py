@@ -19,6 +19,7 @@ class TestTransactions(BaseTest):
         self.mp.validate_connection()
 
         self.tp= TransactionsPage(self.driver)
+        self.tp.simulate_mouse_movement(self.driver)
         self.tp.click_from_chain_bsc()
         self.tp.click_from_chain_token_bnb()
         self.tp.click_to_chain_bsc()
@@ -27,6 +28,8 @@ class TestTransactions(BaseTest):
         self.tp.click_accept_button()
         self.mp.open_metamask_()
         # self.mp.switch_to_meta_mask()
-        self.mp.click_next_btn()
+        self.mp.click_confirm_btn()
+        time.sleep(5)
         self.mp.switch_window()
+        time.sleep(2)
         self.mp.validate_transaction_successful()
