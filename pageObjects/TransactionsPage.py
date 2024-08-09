@@ -9,6 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 class TransactionsPage:
 
     bsc_xpath= "//span[contains(text(), 'BSC')]"
+    bsc_to_xpath= "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]"
     bnb_image_css= "img.c-ezVtOj.c-ezVtOj-ijNtXOL-css[src='https://assets.coingecko.com/coins/images/825/small/binance-coin-logo.png?1547034615']"
     bnb_token_xpath = "//span[contains(text(), 'BNB')]"
     dai_token_xpath= "//span[contains(text(), 'DAI')]"
@@ -47,11 +48,11 @@ class TransactionsPage:
 
     def click_to_chain_bsc(self):
         try:
+
             wait = WebDriverWait(self.driver, 20)
             click_bsc_chain = wait.until(
-            EC.element_to_be_clickable((By.XPATH, self.bsc_xpath)))
+            EC.element_to_be_clickable((By.XPATH, self.bsc_to_xpath)))
             click_bsc_chain.click()
-            time.sleep(3)
             click_bsc_chain.click()
         except:
             assert False, "To BSC chain button is not visible"
@@ -89,6 +90,6 @@ class TransactionsPage:
             accept_button = wait.until(
             EC.element_to_be_clickable((By.XPATH, self.accept_button_xpath)))
             accept_button.click()
-            time.sleep(20)
+            time.sleep(15)
         except:
             assert False, "Accept button not visible or clickable"

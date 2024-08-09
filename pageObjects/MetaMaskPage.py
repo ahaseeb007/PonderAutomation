@@ -14,8 +14,10 @@ class MetaMaskPage:
     next_button_xpath= '//button[text()="Next"]'
     click_confirm_btn_css= ".btn--rounded.btn-primary"
     connect_wallet_xpath= "//button[normalize-space()='Connect Wallet']"
-    confirm_button_xpath= '//button[text()="Confirm"]'
+    confirm_button_xpath= "//button[text()='Confirm']"
+    confirm_button = "//button[@data-testid='page-container-footer-next' and text()='Confirm']"
     next_button_css= 'button.btn--rounded.btn-primary.page-container__footer-button'
+
 
     def __init__(self,driver):
         self.driver= driver
@@ -59,6 +61,20 @@ class MetaMaskPage:
 
         time.sleep(10)
 
+    def open_metamask_(self):
+
+        # Open a new tab with an empty URL
+        self.driver.execute_script("window.open('', '_blank');")
+
+        # Get all window handles
+        all_handles = self.driver.window_handles
+
+        # Switch to the new tab (the last handle in the list)
+        self.driver.switch_to.window(all_handles[-1])
+
+        # Navigate to the Chrome extension page
+        self.driver.get("chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html")
+
     def switch_to_meta_mask(self):
 
         try:
@@ -80,7 +96,17 @@ class MetaMaskPage:
 
     def click_next_btn(self):
 
-        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR,self.next_button_css))).click()
+        try:
+            WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH,self.confirm_button)))
+            element = self.driver.find_element(By.XPATH, self.confirm_button)
+
+            # Use JavaScript to click the element
+            self.driver.execute_script("arguments[0].click();", element)
+
+            time.sleep(5)
+
+        except:
+            assert False, "Confirm button on MetaMask is not visible or clickable"
 
     def validate_transaction_successful(self):
 
