@@ -11,8 +11,13 @@ class MetaMaskPage:
     enter_password_field_ID= "password"
     click_unlock_btn_xpath= "//button[@data-testid='unlock-submit']"
     ethereum_chain_xpath= "//span[normalize-space()='Ethereum']"
+    next_button_xpath= '//button[text()="Next"]'
     click_confirm_btn_css= ".btn--rounded.btn-primary"
     connect_wallet_xpath= "//button[normalize-space()='Connect Wallet']"
+    confirm_button_xpath= "//button[text()='Confirm']"
+    confirm_button = "//button[@data-testid='page-container-footer-next' and text()='Confirm']"
+    next_button_css= 'button.btn--rounded.btn-primary.page-container__footer-button'
+
 
     def __init__(self,driver):
         self.driver= driver
@@ -54,7 +59,23 @@ class MetaMaskPage:
         shadow_element = fifth_shadow_root.find_element(By.CSS_SELECTOR, "wui-list-wallet[name='MetaMask']")
         shadow_element.click()
 
-        time.sleep(2)
+        time.sleep(10)
+
+    def open_metamask_(self):
+
+        # Open a new tab with an empty URL
+        # self.driver.execute_script("window.open('', '_blank');")
+
+        # Get all window handles
+        all_handles = self.driver.window_handles
+
+        # Switch to the new tab (the last handle in the list)
+        self.driver.switch_to.window(all_handles[-1])
+
+        # Navigate to the Chrome extension page
+        # self.driver.get("chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html")
+
+        time.sleep(5)
 
     def switch_to_meta_mask(self):
 
@@ -73,6 +94,46 @@ class MetaMaskPage:
     def click_unblock_btn(self):
 
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.XPATH,self.click_unlock_btn_xpath))).click()
+        time.sleep(5)
+
+    def click_confirm_btn(self):
+
+        try:
+            WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH,self.confirm_button)))
+            element = self.driver.find_element(By.XPATH, self.confirm_button)
+
+            # Use JavaScript to click the element
+            self.driver.execute_script("arguments[0].click();", element)
+
+            time.sleep(5)
+
+        except:
+            assert False, "Confirm button on MetaMask is not visible or clickable"
+
+    def validate_transaction_successful(self):
+
+        try:
+            WebDriverWait(self.driver, 20).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, "span.c-dXbppQ.c-dXbppQ-lnuBr-color-gray.c-dXbppQ-kQnmw-heading-h9")))
+
+            # Locate the "Transaction Hash" label
+            transaction_hash_label = self.driver.find_element(By.CSS_SELECTOR,
+                                                         "span.c-dXbppQ.c-dXbppQ-lnuBr-color-gray.c-dXbppQ-kQnmw-heading-h9")
+
+            # Print the label text
+            print("Label:", transaction_hash_label.text)
+
+            # Locate the transaction hash value
+            transaction_hash_value = self.driver.find_element(By.CSS_SELECTOR,
+                                                         "span.c-dXbppQ.c-dXbppQ-lnuBr-color-gray.c-dXbppQ-kQnmw-heading-h9.c-dXbppQ-igsmDXe-css")
+
+            # Print the transaction hash value
+            print("Transaction Hash:", transaction_hash_value.text)
+
+            swap_again_button = self.driver.find_element(By.XPATH, "//button[contains(., 'Swap Again')]")
+            print("Swap again button is visible")
+        except:
+            assert False, "Transaction is not successful"
 
     def switch_window(self):
 

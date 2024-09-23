@@ -1,5 +1,62 @@
-2024/08/08-13:07:08.077 a707 Reusing MANIFEST /Users/admin/PycharmProjects/Ponder-Automation/F:\testing\Ponder/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/MANIFEST-000001
-2024/08/08-13:07:08.078 a707 Recovering log #778
-2024/08/08-13:07:08.082 a707 Level-0 table #781: started
-2024/08/08-13:07:08.102 a707 Level-0 table #781: 3034874 bytes OK
-2024/08/08-13:07:08.110 a707 Delete type=0 #778
+2024/08/09-22:06:35.097 a607 Reusing MANIFEST /Users/admin/PycharmProjects/Ponder-Automation/F:\testing\Ponder/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/MANIFEST-000001
+2024/08/09-22:06:35.097 a607 Recovering log #1045
+2024/08/09-22:06:35.103 a607 Level-0 table #1048: started
+2024/08/09-22:06:35.125 a607 Level-0 table #1048: 2975364 bytes OK
+2024/08/09-22:06:35.133 a607 Delete type=0 #1045
+2024/08/09-22:06:43.698 9803 Level-0 table #1051: started
+2024/08/09-22:06:43.719 9803 Level-0 table #1051: 2975554 bytes OK
+2024/08/09-22:06:43.727 9803 Delete type=0 #1049
+2024/08/09-22:06:43.728 a607 Compacting 4@0 + 1@1 files
+2024/08/09-22:06:43.754 a607 Generated table #1052@0: 1 keys, 2975554 bytes
+2024/08/09-22:06:43.755 a607 Compacted 4@0 + 1@1 files => 2975554 bytes
+2024/08/09-22:06:43.762 a607 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/08/09-22:06:43.762 a607 Delete type=2 #1042
+2024/08/09-22:06:43.763 a607 Delete type=2 #1046
+2024/08/09-22:06:43.763 a607 Delete type=2 #1044
+2024/08/09-22:06:43.763 a607 Delete type=2 #1051
+2024/08/09-22:06:43.763 a607 Delete type=2 #1048
+2024/08/09-22:06:50.757 9803 Level-0 table #1054: started
+2024/08/09-22:06:50.776 9803 Level-0 table #1054: 2974984 bytes OK
+2024/08/09-22:06:50.782 9803 Delete type=0 #1050
+2024/08/09-22:06:52.338 9803 Level-0 table #1056: started
+2024/08/09-22:06:52.357 9803 Level-0 table #1056: 2974851 bytes OK
+2024/08/09-22:06:52.366 9803 Delete type=0 #1053
+2024/08/09-22:06:55.758 9803 Level-0 table #1058: started
+2024/08/09-22:06:55.778 9803 Level-0 table #1058: 2974851 bytes OK
+2024/08/09-22:06:55.788 9803 Delete type=0 #1055
+2024/08/09-22:07:14.019 9803 Level-0 table #1060: started
+2024/08/09-22:07:14.038 9803 Level-0 table #1060: 2974929 bytes OK
+2024/08/09-22:07:14.046 9803 Delete type=0 #1057
+2024/08/09-22:07:14.047 9803 Compacting 4@0 + 1@1 files
+2024/08/09-22:07:14.072 9803 Generated table #1061@0: 1 keys, 2974929 bytes
+2024/08/09-22:07:14.073 9803 Compacted 4@0 + 1@1 files => 2974929 bytes
+2024/08/09-22:07:14.080 9803 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/08/09-22:07:14.080 9803 Delete type=2 #1054
+2024/08/09-22:07:14.080 9803 Delete type=2 #1056
+2024/08/09-22:07:14.080 9803 Delete type=2 #1052
+2024/08/09-22:07:14.080 9803 Delete type=2 #1060
+2024/08/09-22:07:14.080 9803 Delete type=2 #1058
+2024/08/09-22:07:17.341 9803 Level-0 table #1063: started
+2024/08/09-22:07:17.359 9803 Level-0 table #1063: 2975677 bytes OK
+2024/08/09-22:07:17.367 9803 Delete type=0 #1059
+2024/08/09-22:07:20.176 9803 Level-0 table #1065: started
+2024/08/09-22:07:20.195 9803 Level-0 table #1065: 2976081 bytes OK
+2024/08/09-22:07:20.205 9803 Delete type=0 #1062
+2024/08/09-22:07:21.634 9803 Level-0 table #1067: started
+2024/08/09-22:07:21.652 9803 Level-0 table #1067: 2976758 bytes OK
+2024/08/09-22:07:21.662 9803 Delete type=0 #1064
+2024/08/09-22:07:29.986 9803 Level-0 table #1069: started
+2024/08/09-22:07:30.004 9803 Level-0 table #1069: 2976581 bytes OK
+2024/08/09-22:07:30.012 9803 Delete type=0 #1066
+2024/08/09-22:07:30.013 a607 Compacting 4@0 + 1@1 files
+2024/08/09-22:07:30.042 a607 Generated table #1070@0: 1 keys, 2976581 bytes
+2024/08/09-22:07:30.043 a607 Compacted 4@0 + 1@1 files => 2976581 bytes
+2024/08/09-22:07:30.050 a607 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/08/09-22:07:30.050 a607 Delete type=2 #1069
+2024/08/09-22:07:30.050 a607 Delete type=2 #1061
+2024/08/09-22:07:30.050 a607 Delete type=2 #1063
+2024/08/09-22:07:30.050 a607 Delete type=2 #1067
+2024/08/09-22:07:30.050 a607 Delete type=2 #1065
+2024/08/09-22:07:33.691 9803 Level-0 table #1072: started
+2024/08/09-22:07:33.711 9803 Level-0 table #1072: 2977417 bytes OK
+2024/08/09-22:07:33.718 9803 Delete type=0 #1068
